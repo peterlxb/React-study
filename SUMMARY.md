@@ -13,4 +13,5 @@
   * [Lifting State Up](reactji-ben-zhi-shi/lifting-state-up.md)
 * React进阶学习
   * JSX进阶
+  * [React和解\(Reconciliation\)](reacthe-jie.md)
 
