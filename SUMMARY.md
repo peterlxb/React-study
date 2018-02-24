@@ -11,8 +11,6 @@
   * [Lists](reactji-ben-zhi-shi/lists.md)
   * [Forms](reactji-ben-zhi-shi/forms.md)
   * [Lifting State Up](reactji-ben-zhi-shi/lifting-state-up.md)
-* [React 进阶知识](rendering-ui-with-react.md)
-* React Router
-* Redux
-* Mobx
+* React进阶学习
+  * JSX进阶
 
