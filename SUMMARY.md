@@ -16,7 +16,7 @@
   * [使用PropsType类型检查](React进阶学习/使用PropsType类型检查.md)
   * [使用Refs](React进阶学习/使用Refs.md)
   * [使用无控制的组件](React进阶学习/使用无控制的组件.md)
-  * [React和解Reconciliation)](React进阶学习/React和解Reconciliation.md)
+  * [React和解Reconciliation\)](React进阶学习/React和解Reconciliation.md)
   * [官方的context](React进阶学习/guan-fang-de-context.md)
   * [Fragments使用](React进阶学习/官方的context.md)
   * [Portals使用介绍](React进阶学习/Portals使用介绍.md)
@@ -32,3 +32,5 @@
   * [关于MobX](MobX/关于MobX.md)
 * [React-Router](React-Router.md)
   * [关于React Router](React-Router/关于React-Router.md)
+* [问题汇总](wen-ti-hui-zong.md)
+
