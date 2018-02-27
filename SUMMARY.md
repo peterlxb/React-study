@@ -29,6 +29,7 @@
   * [Redux核心概念](Redux入门/Redux核心概念.md)
   * [Actions](Redux入门/Actions.md)
   * [Reducers](Redux入门/Reducers.md)
+  * [Reducers](Redux入门/拆分reducers.md)
   * [Store](Redux入门/Store.md)
   * [Data-Flow](Redux入门/Data-Flow.md)
 * [Redux深入](Redux深入.md)

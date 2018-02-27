@@ -78,3 +78,79 @@ function todoApp(state = initialState, action) {
 上面代码中我们不是直接修改state，而是利用Object.assign()创建一个state的复制。
 也可以使用 object spread operator proposal对象展开运算符实现同样效果{ ...state, ...newState }
 最后在default选项返回最初的state，对于任何未知的action返回prev state非常关键。
+在任何时候都要确保reducer返回一个state(新的state或者之前的state)。
+
+在React course中的示例
+state 的结构
+```JavaScript
+  const initialCalendarState = {
+    sunday:{
+      breakfast:null,
+      lunch:null,
+      dinner:null,
+    },
+    monday:{
+      breakfast:null,
+      lunch:null,
+      dinner:null,
+    },
+    tuesday:{
+      breakfast:null,
+      lunch:null,
+      dinner:null,
+    },
+    ....
+    saturday:{
+      breakfast:null,
+      lunch:null,
+      dinner:null,
+    }
+  }
+```
+示例reducer
+```JavaScript
+  function calendar(state=initialCalendarState, action) {
+    switch (action.type) {
+      case ADD_RECIPE:
+        return {
+          ...state,
+          [day]: { //使用ES6 computed property name
+            ...state[day], //表示除了选定的那一天之外的所有天
+            [meal]:recipe.label,
+          }
+        }
+      case REMOVE_RECIPE:
+        return {
+          ...state,
+          [day]:{
+            ...state[day],
+            [meal]:null,
+          }
+        }
+    }
+  }
+```
+在console中测试
+```JavaScript
+  > test1 = {
+    ...initialCalendarState,
+    "monday": {
+      breakfast:"test1",
+      lunch:null,
+      dinner:null,
+    }
+  }
+```
+经过测试不加[],不影响最后的结果，返回的test1对象除了monday的breakfast的值改变，其他都未变。
+在reducer中，直接用Object spread来返回新的对象。
+同样在console中测试
+```JavaScript
+  test2 = {
+    ...initialCalendarState, //第一个...用来过滤其他day
+    ["monday"]:{
+      ...initialCalendarState["monday"],//第二个...用来过滤breakfast和dinner
+      ["lunch"]:"good food"
+    }
+  }
+```
+上面代码同样是创造一个新对象，只有Monday 的lunch选项改变。
