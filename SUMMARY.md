@@ -43,4 +43,7 @@
   * [关于MobX](MobX/关于MobX.md)
 * [React-Router](React-Router.md)
   * [关于React Router](React-Router/关于React-Router.md)
+* [JaveScript算法](JaveScript算法.md)
+  * [快速排序](JaveScript算法/algo-1.md)
+  * [JS算法问题汇总](JaveScript算法/algo-2.md)
 * [问题汇总](问题汇总.md)
