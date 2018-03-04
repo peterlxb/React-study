@@ -56,5 +56,5 @@
 * [JaveScript算法](JaveScript算法.md)
   * [快速排序](JaveScript算法/algo-1.md)
   * [JS算法问题汇总](JaveScript算法/algo-2.md)
-* 深入组件及React内部
-  * 无状态及有状态组件
+* [ES6语法](All-aount-ES6.md)
+  * [ES6变量声明](All-aount-ES6/变量.md)
