@@ -56,7 +56,9 @@
   * [从React Router v4开始](React-Router/cong-react-router-v4-kai-shi.md)
   * [关于React Router小结](React-Router/React-router知识点小结.md)
 * [JaveScript算法](JaveScript算法.md)
-  * [快速排序](JaveScript算法/algo-1.md)
+  * [选择排序](xuan-ze-pai-xu.md)
   * [JS算法问题汇总](JaveScript算法/algo-2.md)
+  * [快速排序](JaveScript算法/algo-1.md)
 * [ES6语法](All-aount-ES6.md)
   * [ES6变量声明](All-aount-ES6/变量.md)
+
