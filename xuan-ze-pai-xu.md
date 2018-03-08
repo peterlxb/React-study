@@ -71,12 +71,12 @@ in deep j loop  9 4
 In deep j loop
 In deep j loop
 In deep j loop
-in deep j loop  6 7
-[ 2, 5, 6, 23, 9, 14, 11, 31 ]
+in deep j loop  6 7        -------找到6最小
+[ 2, 5, 6, 23, 9, 14, 11, 31 ]  ------------从23开始
 in i loop  23 3
 In deep j loop
 In deep j loop
-in deep j loop  9 4
+in deep j loop  9 4          ------找到9最小
 In deep j loop
 In deep j loop
 In deep j loop
@@ -86,7 +86,7 @@ In deep j loop
 In deep j loop
 in deep j loop  14 5
 In deep j loop
-in deep j loop  11 6
+in deep j loop  11 6     -------找到11最小
 In deep j loop
 [ 2, 5, 6, 9, 11, 14, 23, 31 ]
 in i loop  14 5
