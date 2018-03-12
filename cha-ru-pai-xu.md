@@ -20,8 +20,7 @@ const  insertionSort = (arr) => {
             [arr[position],arr[position - 1]] = [arr[position - 1],arr[position]];
             position--;
         }
-        
-        arr[position] = value;
+
         console.log("return inserted arr ",arr);
     }
     console.timeEnd('插入排序耗时');
@@ -104,6 +103,4 @@ i = 1 时 直接跳过不执行while循环。
 以此类推。
 
 1 = 2 38和44呼唤位置。
-
-
 
