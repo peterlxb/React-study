@@ -58,6 +58,7 @@
 * [JaveScript算法](JaveScript算法.md)
   * [选择排序](xuan-ze-pai-xu.md)
   * [冒泡排序](mao-pao-pai-xu.md)
+  * [插入排序](cha-ru-pai-xu.md)
   * [JS算法问题汇总](JaveScript算法/algo-2.md)
   * [快速排序](JaveScript算法/algo-1.md)
 * [ES6语法](All-aount-ES6.md)
