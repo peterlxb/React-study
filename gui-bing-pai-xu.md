@@ -2,11 +2,34 @@
 
 原理就是把两个已经各自排序好的序列合并成一个。
 
-
-
 ![](/assets/merge-sort.png)
 
 实现代码
+
+更简洁的写法
+
+```
+function mergeSort(array) {  //采用自上而下的递归方法
+  var length = array.length;
+  if(length < 2) {
+    return array;
+  }
+  var m = (length >> 1),
+      left = array.slice(0, m),
+      right = array.slice(m); //拆分为两个子数组
+  return merge(mergeSort(left), mergeSort(right));//子数组继续递归拆分,然后再合并
+}
+function merge(left, right){ //合并两个子数组
+  var result = [];
+  while (left.length && right.length) {
+    var item = left[0] <= right[0] ? left.shift() : right.shift();//注意:判断的条件是小于或等于,如果只是小于,那么排序将不稳定.
+    result.push(item);
+  }
+  return result.concat(left.length ? left : right);
+}
+```
+
+
 
 ```
 function mergeSort(arr) {  //采用自上而下的递归方法
@@ -32,10 +55,10 @@ function merge(left, right) {
     console.log("Starting calling merge ");
     console.log("Begin left ", left);
     console.log("Begin right ", right);
-    
+
     var result = [];
     console.time('归并排序耗时');
-    
+
     while (left.length && right.length) {
         if (left[0] <= right[0]) {
             result.push(left.shift()); // left 删除第一个元素并返回
@@ -52,7 +75,7 @@ function merge(left, right) {
 
     while (right.length)
         result.push(right.shift());
-    
+
     console.log("result", result);
     console.timeEnd('归并排序耗时');
     return result;
@@ -155,7 +178,7 @@ Begin right  [ 5, 11 ]
 After shift left  []
 After shift right  [ 11 ]
 result [ 5, 10, 11 ]      -----小组分割排序完
-         
+
 归并排序耗时: 0.144ms
 Starting calling merge 
 Begin left  [ 9, 82 ]
@@ -187,7 +210,6 @@ merge(
 ```
 
 > ```
->
 > 归并排序原理
 > 将序列分为子序列，最终分成两个元素进行比较或只有一个元素
 >
@@ -211,20 +233,6 @@ merge(
 >
 > 然后就是 merge(left, right) ==> merge([ 3, 27, 38, 43 ], [ 5, 9, 10, 11, 82 ])
 > ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
