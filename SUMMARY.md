@@ -26,7 +26,7 @@
   * [Accessibility无障碍性](React进阶学习/Accessibility无障碍性.md)
 * [深入组件及React内部](深入组件及React内部.md)
   * [无状态及有状态组件](深入组件及React内部/无状态及有状态组件.md)
-  * [更新生命周期勾子](深入组件及React内部/更新生命周期勾子.md)
+  * [生命周期方法](深入组件及React内部/更新生命周期勾子.md)
   * [理解React生命周期](深入组件及React内部/理解React生命周期.md)
   * [纯组件对性能的影响](深入组件及React内部/纯组件对性能的影响.md)
   * [理解React的DOM更新策略](深入组件及React内部/理解React的DOM更新策略.md)
