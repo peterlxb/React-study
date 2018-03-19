@@ -12,7 +12,7 @@ constructor\(\)方法在每次创建一个新对象时会被执行一遍。在�
 
 在第一行应该加上super\(props\); 有一段定义
 
-> Calling this special function will call the constructor of our parent class and allow it to initialize itself. This is why we have access to `this.props `only after we’ve initially called `super`.
+> Calling this special function will call the constructor of our parent class and allow it to initialize itself. This is why we have access to `this.props`only after we’ve initially called `super`.
 
 constructor\(\)之后是componentWillMount\(\).
 
@@ -34,8 +34,6 @@ constructor\(\)之后是componentWillMount\(\).
 
 ![](/assets/lifecycle-2.png)
 
-
-
 首先调用componentWillReceiveProps\(nextProps\)方法。这个方法内能做的操作是同步state 和props。
 
 调用完这个方法执行shouldComponentUpdate\(nextProps, nextState\),能做的操作是同步state 和props。
@@ -48,7 +46,21 @@ componentWillUpdate\(\)这里是最适合同步state和props的地方，因为�
 
 然后就是调用render\(\)方法。然后更新子组件。
 
-然后调用 componentDidUpdate\(prevProps,  prevState\).
+子组件更新完，然后调用 componentDidUpdate\(prevProps,  prevState\).
+
+在componentDidUpdate里面同样可以处理http请求\(ajax\)。
+
+调用setState\(\)会导致重新渲染。
+
+### 第三 在组件中调用setState会导致re-rendering:
+
+![](/assets/lifecycle-3.png)
+
+这个是由内部change，setState\(\)触发的re-rendering。
+
+在shouldComponentUpdate\(nextProps,nextState\)中可以进行检查判断是不是进行更新。
+
+
 
 
 
