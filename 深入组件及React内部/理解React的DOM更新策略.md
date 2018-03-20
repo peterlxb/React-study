@@ -20,9 +20,10 @@
 
 ![](/assets/v-dom.png)
 
-
-
-
-
-
-
+1. 调用render方法并不意味着render中的内容会马上渲染到真正的DOM中。
+2. render更像是用来描述HTML最后应该是什么样子。
+3. 调用render后，有时候展示的内容可能与之前还是一样。
+4. shouldComponentUpdate就可以用于防止不必要的render的调用。
+5. virtual dom 只是一个概念，并不存在。在react中，是一个用来表示真实dom的Javascript对象。
+6. 调用render就会产生一个新的re-render virtual dom.与old virtual dom进行比较。
+7. 比较后，只有发现不一样才会真正操作real dom。
