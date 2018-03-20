@@ -14,5 +14,15 @@
 
 像上图示例中一样，在有些情况下在containers组件中进行一些检查可以有效防止一些不必要的更新。
 
+# How React Updates the DOM
+
+一张图说明更新过程
+
+![](/assets/v-dom.png)
+
+
+
+
+
 
 
