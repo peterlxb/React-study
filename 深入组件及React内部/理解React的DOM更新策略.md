@@ -27,3 +27,10 @@
 5. virtual dom 只是一个概念，并不存在。在react中，是一个用来表示真实dom的Javascript对象。
 6. 调用render就会产生一个新的re-render virtual dom.与old virtual dom进行比较。
 7. 比较后，只有发现不一样才会真正操作real dom。
+
+可以将virtual DOM 与real DOM的关系比较成
+ Think of manipulating the virtual DOM as editing a blueprint, as opposed to moving rooms in an actual house.
+
+参考文章
+[react-virtual-dom](https://www.codecademy.com/articles/react-virtual-dom)
+[the-difference-between-virtual-dom-and-dom](http://reactkungfu.com/2015/10/the-difference-between-virtual-dom-and-dom/)
