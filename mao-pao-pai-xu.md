@@ -17,7 +17,7 @@
 ```
 const bubbleSort = (arr) => {
   const n = arr.length;
-  
+
   // 一共要跑 n遍
 
   for (let i = 0; i < n; i++) {
@@ -36,7 +36,7 @@ const bubbleSort = (arr) => {
       console.log(arr)
     }
   }
-  
+
   return arr;
 }
 //打印结果
@@ -119,8 +119,6 @@ Begin in i loop 7         -------------- 第八次
 
 > 设置一标志性变量pos,用于记录每趟排序中最后一次进行交换的位置。由于pos位置之后的记录均已交换到位,故在进行下一趟排序时只要扫描到pos位置即可。
 
-
-
 改进后算法如下:
 
 ```
@@ -139,33 +137,40 @@ const bubbleSort2 = (arr) => {
      console.timeEnd('改进后冒泡排序耗时');
      return arr;
 }
+
 ```
 
+改进版:加了个swapCount用来计数，如果为0说明没有进行交换，就可以直接退出循环打印出数组。
 
+```
+const bubbleSort = (arr) => {
+    const n = arr.length;
+    //用来进行计数，如果发生交换就加1
+    let swapCount;
+    
+    for (let i = 0; i < n; i++) {
+      swapCount = 0;
+     
+      for (let j = 0; j < n - 1 - i; j++) {
+        
+        if (arr[j] > arr[j + 1]) {
+          [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+          swapCount++;
+        }
+      }
+      //没有进行交换说明已经排序好
+      if(swapCount == 0){
+          break;
+      }
+    }
+    return arr;
+  }
 
+console.log(bubbleSort([5, 6, 7, 8, 9, 11, 14]));
 
+```
 
+上面的改进版在排序那些已经排好序的数组时只需要跑一次就行。
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+第一版无论是否排序好都要跑要跑n\*n次。
 
