@@ -2,6 +2,10 @@
 
 ![](https://blog.techbridge.cc/img/huli/sorting/insertion.gif)
 
+插入排序原理就是先把第一个元素作为已经排序的。然后取出第二个与第一个进行排序，这两个排序完再取出第三个元素
+
+与前两个已经排序完的进行比较。一次类推。每次取出一个元素排序与已经排序过的进行二次排序。
+
 ```
 //插入排序
 //类似打扑克牌，不断往前插到合适的位置
@@ -11,13 +15,16 @@ const  insertionSort = (arr) => {
     //假设第一个arr[0]已经排序
     for (let i = 1; i < n; i++) {
         console.log("Starting from i ",i);
+        //设置排序初始位置
         let position = i;
-
+        
+        //进行比较的元素
         const value = arr[i];
 
         while (i >=0 && arr[position - 1] > value ) {
             console.log("Inside while loop ", position);
             [arr[position],arr[position - 1]] = [arr[position - 1],arr[position]];
+            //降序进行比较
             position--;
         }
 
@@ -30,6 +37,8 @@ const  insertionSort = (arr) => {
 var arr1 = [3, 44, 38, 5, 47, 15, 36, 26, 27, 2, 46, 4,];
 console.log(insertionSort(arr1));
 ```
+
+上面排序的问题是position--降序的算法。如果小的值在后面要经过很多次排序才能排到正确位置。如示例中的值2。
 
 打印出来的过程如下
 
