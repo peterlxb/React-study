@@ -44,14 +44,53 @@ quickSort = (arr) => {
     // 在 partition 里面调整数列，并且回传 pivot 的 index
 
     const middle = partition(array, start, end);
+    console.log("before sort: ",array)
     //先递归地排左边的子数列
     _quickSort(array, start, middle - 1);
+    console.log("Left sort: ",array)
     //再递归地排右边的子数列
     _quickSort(array, middle + 1, end);
+    console.log("Right sort: ",array)
     return array;
   };
   return _quickSort(arr, 0, arr.length - 1);
 }
+```
+
+```
+归并排序耗时: 0.112ms
+start and end:  0 6
+pivot:  14
+before sort: [ 10, 7, 6, 9, 14, 20, 15 ]
+start and end:  0 3
+pivot:  10
+before sort: [ 9, 7, 6, 10, 14, 20, 15 ]
+start and end:  0 2
+pivot:  9
+before sort: [ 6, 7, 9, 10, 14, 20, 15 ]
+start and end:  0 1
+pivot:  6
+before sort: [ 6, 7, 9, 10, 14, 20, 15 ]
+start and end:  0 -1
+Left sort: [ 6, 7, 9, 10, 14, 20, 15 ]
+start and end:  1 1
+Right sort:  [ 6, 7, 9, 10, 14, 20, 15 ]
+Left sort: [ 6, 7, 9, 10, 14, 20, 15 ]
+start and end:  3 2
+Right sort:  [ 6, 7, 9, 10, 14, 20, 15 ]
+Left sort: [ 6, 7, 9, 10, 14, 20, 15 ]
+start and end:  4 3
+Right sort:  [ 6, 7, 9, 10, 14, 20, 15 ]
+Left sort: [ 6, 7, 9, 10, 14, 20, 15 ]
+start and end:  5 6
+pivot:  20
+before sort: [ 6, 7, 9, 10, 14, 15, 20 ]
+start and end:  5 5
+Left sort: [ 6, 7, 9, 10, 14, 15, 20 ]
+start and end:  7 6
+Right sort:  [ 6, 7, 9, 10, 14, 15, 20 ]
+Right sort:  [ 6, 7, 9, 10, 14, 15, 20 ]
+[ 6, 7, 9, 10, 14, 15, 20 ]
 ```
 
 
