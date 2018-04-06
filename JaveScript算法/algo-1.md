@@ -1,3 +1,7 @@
+快速排序使用分治法（Divide and conquer）策略来把一个串行（list）分为两个子串行（sub-lists）。
+
+快速排序又是一种分而治之思想在排序算法上的典型应用。本质上来看，快速排序应该算是在冒泡排序基础上的递归分治法。
+
 ## 算法步骤
 
 > **  1.从数列中挑出一个元素，称为 “基准”（pivot）;**
@@ -10,15 +14,13 @@
 
 ![](https://raw.githubusercontent.com/hustcc/JS-Sorting-Algorithm/master/res/quickSort.gif)
 
-
-
 ```
 quickSort = (arr) => {
   //交换数列中的两个元素
   const swap = (array, i , j) => {
     [array[i], array[j]] = [array[j], array[i]];
   }
-  
+
   //分区
   const partition = (array, start, end) => {
     let splitIndex = start + 1;
@@ -28,17 +30,17 @@ quickSort = (arr) => {
         splitIndex++;
       }
     }
-  
+
     // 把 pivot 跟最后一个比它小的元素互换
 
     swap(array, start, splitIndex - 1);
     return splitIndex - 1;
   }
-  
+
   //递归地把小于基准的子数列与大于基准的子数列重新排列
   const _quickSort = (array, start, end) => {
     if (start >= end) return array;
-  
+
     // 在 partition 里面调整数列，并且回传 pivot 的 index
 
     const middle = partition(array, start, end);
