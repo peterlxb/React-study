@@ -66,4 +66,5 @@
 * Vue学习
 * [Vue介绍](vuejie-shao.md)
 * [VueJs与DOM进行关联](vuejsyu-dom-jin-xing-guan-lian.md)
+* [Vue事件Event](vueshi-jian-event.md)
 
