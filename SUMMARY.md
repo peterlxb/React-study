@@ -65,4 +65,5 @@
 * [关于单页应用与服务器端进行auth认证](guan-yu-dan-ye-ying-yong-yu-fu-wu-qi-duan-jin-xing-auth-ren-zheng.md)
 * Vue学习
 * [Vue介绍](vuejie-shao.md)
+* [VueJs与DOM进行关联](vuejsyu-dom-jin-xing-guan-lian.md)
 
