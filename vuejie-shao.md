@@ -23,3 +23,15 @@ var app = new Vue({
 
 ![](/assets/屏幕快照 2018-04-19 下午2.32.04.png)
 
+> Vue  creates a template based on out HTML code store internally and basic uses this template to
+>
+> create a real HTML code which then is rendered as DOM
+>
+> The HTML code we write is not the one running in the browser in the end.
+>
+> There is the layer in the middle and this layer is the vue instance which takes our HTML code creates a templates 
+>
+> and then render this templates like {{ .title }} ,then output the final HTML code which gets rendered
+
+
+
