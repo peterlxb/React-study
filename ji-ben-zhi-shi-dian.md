@@ -155,7 +155,7 @@ data: {
     // 也可以用 JavaScript 直接调用方法
     example2.greet() // => 'Hello Vue.js!'
 
-#### [事件修饰符](https://cn.vuejs.org/v2/guide/events.html#%E4%BA%8B%E4%BB%B6%E4%BF%AE%E9%A5%B0%E7%AC%A6)
+#### [事件修饰符](https://cn.vuejs.org/v2/guide/events.html#事件修饰符)
 
 修饰符是由点开头的指令后缀来表示的。
 
@@ -194,7 +194,7 @@ data: {
 <h1 v-else>No</h1>
 ```
 
-#### [`<template>`元素上使用`v-if`条件渲染分组](https://cn.vuejs.org/v2/guide/conditional.html#%E5%9C%A8-lt-template-gt-%E5%85%83%E7%B4%A0%E4%B8%8A%E4%BD%BF%E7%94%A8-v-if-%E6%9D%A1%E4%BB%B6%E6%B8%B2%E6%9F%93%E5%88%86%E7%BB%84)
+#### [`<template>`元素上使用`v-if`条件渲染分组](https://cn.vuejs.org/v2/guide/conditional.html#在-lt-template-gt-元素上使用-v-if-条件渲染分组)
 
 ```
 <template v-if="ok">
@@ -221,7 +221,7 @@ data: {
 </div>
 ```
 
-#### [`key`管理可复用的元素](https://cn.vuejs.org/v2/guide/conditional.html#%E7%94%A8-key-%E7%AE%A1%E7%90%86%E5%8F%AF%E5%A4%8D%E7%94%A8%E7%9A%84%E5%85%83%E7%B4%A0)
+#### [`key`管理可复用的元素](https://cn.vuejs.org/v2/guide/conditional.html#用-key-管理可复用的元素)
 
 ```
 <template v-if="loginType === 'username'">
@@ -241,6 +241,115 @@ data: {
 `v-if`也是**惰性的**：如果在初始渲染时条件为假，则什么也不做——直到条件第一次变为真时，才会开始渲染条件块。
 
 相比之下，`v-show`就简单得多——不管初始条件是什么，元素总是会被渲染，并且只是简单地基于 CSS 进行切换。
+
+## 列表渲染
+
+### [用`v-for`把一个数组对应为一组元素](https://cn.vuejs.org/v2/guide/list.html#%E7%94%A8-v-for-%E6%8A%8A%E4%B8%80%E4%B8%AA%E6%95%B0%E7%BB%84%E5%AF%B9%E5%BA%94%E4%B8%BA%E4%B8%80%E7%BB%84%E5%85%83%E7%B4%A0)
+
+```
+<ul id="example-2">
+  <li v-for="(item, index) in items">
+    {{ parentMessage }} - {{ index }} - {{ item.message }}
+  </li>
+</ul>
+```
+
+```
+var example2 = new Vue({
+  el: '#example-2',
+  data: {
+    parentMessage: 'Parent',
+    items: [
+      { message: 'Foo' },
+      { message: 'Bar' }
+    ]
+  }
+})
+```
+
+### [一个对象的`v-for`](https://cn.vuejs.org/v2/guide/list.html#%E4%B8%80%E4%B8%AA%E5%AF%B9%E8%B1%A1%E7%9A%84-v-for)
+
+```
+<ul id="v-for-object" class="demo">
+  <li v-for="value in object">
+    {{ value }}
+  </li>
+</ul>
+```
+
+```
+new Vue({
+  el: '#v-for-object',
+  data: {
+    object: {
+      firstName: 'John',
+      lastName: 'Doe',
+      age: 30
+    }
+  }
+})
+```
+
+```
+<div v-for="(value, key) in object">
+  {{ key }}: {{ value }}
+</div>
+```
+
+```
+<div v-for="(value, key, index) in object">
+  {{ index }}. {{ key }}: {{ value }}
+</div>
+```
+
+
+
+### [`key`](https://cn.vuejs.org/v2/guide/list.html#key)
+
+为了给 Vue 一个提示，以便它能跟踪每个节点的身份，从而重用和重新排序现有元素，你需要为每项提供一个唯一`key`属性。
+
+```
+<div v-for="item in items" :key="item.id">
+  <!-- 内容 -->
+</div>
+```
+
+### [`v-for`with`v-if`](https://cn.vuejs.org/v2/guide/list.html#v-for-with-v-if)
+
+当它们处于同一节点，`v-for`的优先级比`v-if`更高，这意味着`v-if`将分别重复运行于每个
+
+`v-for`循环中。当你想为仅有的\_一些\_项渲染节点时，这种优先级的机制会十分有用
+
+```
+<li v-for="todo in todos" v-if="!todo.isComplete">
+  {{ todo }}
+</li>
+```
+
+如果你的目的是有条件地跳过循环的执行，那么可以将`v-if`置于外层元素 \(或[`<template>`](https://cn.vuejs.org/v2/guide/conditional.html#%E5%9C%A8-lt-template-gt-%E4%B8%AD%E9%85%8D%E5%90%88-v-if-%E6%9D%A1%E4%BB%B6%E6%B8%B2%E6%9F%93%E4%B8%80%E6%95%B4%E7%BB%84)\)上。如：
+
+```
+<ul v-if="todos.length">
+  <li v-for="todo in todos">
+    {{ todo }}
+  </li>
+</ul>
+<p v-else>No todos left!</p>
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
