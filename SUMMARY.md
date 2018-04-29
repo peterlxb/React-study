@@ -64,8 +64,8 @@
   * [ES6变量声明](All-aount-ES6/Array-reduce.md)
 * [关于单页应用与服务器端进行auth认证](guan-yu-dan-ye-ying-yong-yu-fu-wu-qi-duan-jin-xing-auth-ren-zheng.md)
 * [Vue学习](vuexue-xi.md)
-  * [Vue介绍](vuejie-shao.md)
   * [基本知识点](ji-ben-zhi-shi-dian.md)
-  * [VueJs与DOM进行关联](vuejsyu-dom-jin-xing-guan-lian.md)
   * [Vue事件Event](vueshi-jian-event.md)
+  * [VueJS如何更新DOM](vuejsru-he-geng-xin-dom.md)
+  * [VueJS实例生命周期](vuejsshi-li-sheng-ming-zhou-qi.md)
 
