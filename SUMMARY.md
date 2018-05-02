@@ -68,4 +68,5 @@
   * [Vue事件Event](vueshi-jian-event.md)
   * [VueJS如何更新DOM](vuejsru-he-geng-xin-dom.md)
   * [VueJS实例生命周期](vuejsshi-li-sheng-ming-zhou-qi.md)
+  * [Vue组件](vuezu-jian.md)
 
