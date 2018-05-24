@@ -32,6 +32,7 @@
   * [纯组件对性能的影响](深入组件及React内部/纯组件对性能的影响.md)
   * [理解React的DOM更新策略](深入组件及React内部/理解React的DOM更新策略.md)
   * [高阶组件示例](深入组件及React内部/高阶组件示例.md)
+* [Redux学习资料汇总](reduxxue-xi-zi-liao-hui-zong.md)
 * [Redux入门](Redux入门.md)
   * [Redux介绍](Redux入门/Redux介绍.md)
   * [Redux核心概念](Redux入门/Redux核心概念.md)
@@ -47,6 +48,12 @@
   * [Redux中间件](Redux深入/Redux中间件.md)
   * [React-Router-with-Redux](Redux深入/Reddit-api-example.md)
   * [Reddit-api-example](Redux深入/Async-Actions.md)
+* [Redux源码学习](reduxyuan-ma-xue-xi.md)
+  * createStore.js
+  * bindActionCreators.js
+  * combineReducers.js
+  * compose.js
+  * applyMiddleware.js
 * [MobX](MobX.md)
   * [关于MobX](MobX/关于MobX.md)
 * [React-Router](React-Router.md)
@@ -72,4 +79,5 @@
   * [Vue组件](vuezu-jian.md)
 * React源码学习
 * [React组件-元素-实例](reactzu-4ef6-yuan-7d20-shi-li.md)
+* Redux学习资料汇总
 
