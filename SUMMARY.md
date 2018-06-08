@@ -49,11 +49,12 @@
   * [React-Router-with-Redux](Redux深入/Reddit-api-example.md)
   * [Reddit-api-example](Redux深入/Async-Actions.md)
 * [Redux源码学习](reduxyuan-ma-xue-xi.md)
-  * createStore.js
-  * bindActionCreators.js
+  * [createStore.js](reduxyuan-ma-xue-xi/createstorejs.md)
+  * [bindActionCreators.js](reduxyuan-ma-xue-xi/bindactioncreatorsjs.md)
   * combineReducers.js
   * compose.js
   * applyMiddleware.js
+  * [Redux从设计到源码](reduxyuan-ma-xue-xi/reduxcong-she-ji-dao-yuan-ma.md)
 * [MobX](MobX.md)
   * [关于MobX](MobX/关于MobX.md)
 * [React-Router](React-Router.md)
